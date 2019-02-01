@@ -8,6 +8,13 @@ echo "File Name: $0"
 echo "Command Line Argument 1: $1"
 echo "Command Line Argument 2: $2"
 
+echo "Input a file name"
+read file
+
+echo "Input a regular expression"
+read exp
+
+grep $exp $file
 
 echo "Number of phone numbers: "
 grep -o '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' $2 | wc -l
