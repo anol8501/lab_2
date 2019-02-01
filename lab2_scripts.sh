@@ -5,7 +5,9 @@
 #Problem 1 Code:
 #Make sure to document how you are solving each problem!
 echo "File Name: $0"
-echo "COmmand Line Argument 1: $1"
+echo "Command Line Argument 1: $1"
+echo "Command Line Argument 2: $2"
+
 
 echo "Number of phone numbers: "
 grep -o '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' $2 | wc -l
