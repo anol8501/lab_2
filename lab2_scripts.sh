@@ -4,16 +4,16 @@
 
 #Problem 1 Code:
 #Make sure to document how you are solving each problem!
+echo "File Name: $0"
+echo "COmmand Line Argument 1: $1"
 
 echo "Number of phone numbers: "
-grep -o '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' regex_practice.txt | wc -l
+grep -o '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' $2 | wc -l
 
 echo "Number of emails: "
-grep -o @ regex_practice.txt |wc -l
+grep -o @ $2 |wc -l
 
-grep '^[3][0][3]' regex_practice.txt > phone_results.txt
-grep '@geocities.com$' regex_practice.txt > email_results.txt
+grep '^[3][0][3]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]' $2 > phone_results.txt
+grep '@geocities.com$' $2 > email_results.txt
 
-echo "Enter an expression: "
-read input
-grep $input regex_practice.txt > command_results.txt
+grep $1 $2 > command_results.txt
